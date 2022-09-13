@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* Colors */
+    --aqua: hsl(177, 68%, 64%);
+    --darkOrange: hsl(12, 94%, 65%);
+    --orange: hsl(33, 100%, 70%);
+    --white: hsl(20, 33%, 98%);
+    --black: hsl(244, 23%, 12%);
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -10em;
+    top: -15em;
+    z-index: -1;
+    background-image: url('/code/assets/bg-main-mobile.png');
+    background-position: center;
+    filter: blur(5px);
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 100%;
+}
+
+#logo {
+    width: 9em;
+    margin: 2.5em 0 4em 1.5em;
+}
+
+#description {
+    width: 87.5%;
+    padding-bottom: 4.25em;
+}
+
+h1{
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+#description p {
+    line-height: 1.625em;
+}
+
+/*#premium-plan {
+    width: 100%;
+    height: 64em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6.25em;
+} /*
+
+
+#presentation-bg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12.25em;
+    background: var(--black);
+    border-radius: 0.75em;
+}
+
+#illustration-app {
+    position: absolute;
+    bottom: 18.5em;
+    max-width: 312px;
+    max-height: 642px;
+    width: 60%;
+    height: 70%;
+}
+
+#premium-eq {
+    width: 100%;
+    max-width: 446px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 66.75em;
+    background-color: var(--darkOrange);
+    color: var(--white);
+    border-radius: 0.75em;
+    line-height: 1.75em;
+}
+
+#premium-eq h2, #premium-eq p {
+    width: 82.5%;
+}
+
+#premium-eq h2 {
+    font-size: 2em;
+    line-height: 2.5rem;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+}
+
+#premium-eq p {
+    font-size: 1.125em;
+    margin-bottom: 2.25em;
+}
+
+#price {
+    width: 82.5%;
+    display: flex;
+    font-size: 1.25em;
+    line-height: 2em;
+    letter-spacing: -0.0125em;
+    margin-bottom: 2em;
+}
+
+#price span {
+    font-size: 3.25em;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+footer {
+    width: 20.4375em;
+    display: flex;
+    flex-direction: column;
+}
+
+footer #logo {
+    margin: 0;
+    margin-bottom: 2em;
+}
+
+footer p {
+    line-height: 1.625em;
+    margin-bottom: 4em;
+}
+
+.socials {
+    width: 6.25em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5em;
+}
+
+/* Buttons */
+
+.button {
+    width: 82.5%;
+    height: 3.8125em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75em;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 2em; 
+    font-size: 1.125em;
+    margin-bottom: 1em;
+}
+
+.button img {
+    margin-right: 0.35em;
+}
+
+#iosDownloadButtonDefault {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#iosDownloadButtonDefault:hover {
+    background-color: var(--aqua);
+    color: var(--white);
+}
+
+#androidDownloadButtonDefault {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#androidDownloadButtonDefault:hover {
+    background-color: var(--orange);
+    color: var(--black);
+}
+
+
+.box:nth-child(3) {
+    background-color: black;
+    flex-grow: 2;
+}
+
+/* @media (min-width: 481px) and (max-width: 768px) {
+
+    main {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #description {
+        grid-column: 1 / 6 ;
+        margin-bottom: 4em;
+    }
+
+    #description h1 {
+        font-size: 64px;
+    }
+
+    #description p {
+        font-size: 1.125em;
+    }
+
+    #logo {
+        margin-left: 2.5em;
+    }
+
+    #bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -9em;
+        top: -16em;
+        z-index: -1;
+        background-image: url('/code/assets/bg-main-tablet.png');
+        background-position: center;
+        filter: blur(30px);
+    }
+
+    #bg-image {
+        width: 50%;
+        height: 50%;
+        scale: 0.75;
+        background-image: url(/code/assets/bg-pattern-1.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -6em;
+        right: -8.5em;
+    }
+
+    #premium-plan {
+        width: 90%;
+        grid-area: 2 / 1 / 3 / 7;
+    }
+
+    
+
+    #illustration-app {
+        width: 70%;
+        height: 100%;
+        bottom: 12em;
+        right: 15em;
+    }
+
+    #premium-eq {
+        width: 47.5%;
+        left: 20em;
+        top: 60em;
+        padding-bottom: 1.5em;
+    }
+
+    footer {
+        grid-area: 3 / 1 / 2 / 7;
+    }
+
+} */
