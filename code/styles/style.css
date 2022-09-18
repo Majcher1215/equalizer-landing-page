@@ -1,281 +1,407 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+:root {
+
     /* Colors */
     --aqua: hsl(177, 68%, 64%);
     --darkOrange: hsl(12, 94%, 65%);
     --orange: hsl(33, 100%, 70%);
     --white: hsl(20, 33%, 98%);
     --black: hsl(244, 23%, 12%);
-}
-
-html {
-    width: 100vw;
-    height: 100vh;
-}
-
-body {
-    width: 100%;
-    height: 100%;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 16px;
-    background-color: var(--white);
-    color: var(--black);
 }
 
-#bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -10em;
-    top: -15em;
-    z-index: -1;
-    background-image: url('/code/assets/bg-main-mobile.png');
-    background-position: center;
-    filter: blur(5px);
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-main {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    grid-template-columns: 100%;
-}
+/* Remove default margin */
 
-#logo {
-    width: 9em;
-    margin: 2.5em 0 4em 1.5em;
-}
-
-#description {
-    width: 87.5%;
-    padding-bottom: 4.25em;
-}
-
-h1{
-    font-size: 2.5em;
-    font-weight: 700;
-    margin-bottom: 1.25rem;
-}
-
-#description p {
-    line-height: 1.625em;
-}
-
-/*#premium-plan {
-    width: 100%;
-    height: 64em;
-    display: flex;
-    flex-direction: column;
-    margin-top: 6.25em;
-} /*
-
-
-#presentation-bg {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 12.25em;
-    background: var(--black);
-    border-radius: 0.75em;
-}
-
-#illustration-app {
-    position: absolute;
-    bottom: 18.5em;
-    max-width: 312px;
-    max-height: 642px;
-    width: 60%;
-    height: 70%;
-}
-
-#premium-eq {
-    width: 100%;
-    max-width: 446px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 66.75em;
-    background-color: var(--darkOrange);
-    color: var(--white);
-    border-radius: 0.75em;
-    line-height: 1.75em;
-}
-
-#premium-eq h2, #premium-eq p {
-    width: 82.5%;
-}
-
-#premium-eq h2 {
-    font-size: 2em;
-    line-height: 2.5rem;
-    margin-top: 1em;
-    margin-bottom: 0.75em;
-}
-
-#premium-eq p {
-    font-size: 1.125em;
-    margin-bottom: 2.25em;
-}
-
-#price {
-    width: 82.5%;
-    display: flex;
-    font-size: 1.25em;
-    line-height: 2em;
-    letter-spacing: -0.0125em;
-    margin-bottom: 2em;
-}
-
-#price span {
-    font-size: 3.25em;
-    font-weight: 700;
-    margin-right: 1rem;
-}
-
-footer {
-    width: 20.4375em;
-    display: flex;
-    flex-direction: column;
-}
-
-footer #logo {
+* {
     margin: 0;
-    margin-bottom: 2em;
+    padding: 0;
+    font: inherit;
 }
 
-footer p {
-    line-height: 1.625em;
-    margin-bottom: 4em;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
-.socials {
-    width: 6.25em;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5em;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
+
+html, body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography */
+
+:root {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2em;
+    letter-spacing: -0.01125rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.25em;
+    font-weight: 700;
+}
+
+
 
 /* Buttons */
 
 .button {
-    width: 82.5%;
-    height: 3.8125em;
+    height: 65px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 0.75em;
+    align-items: center;
+    border-radius: 0.5em;
     text-decoration: none;
     font-weight: 700;
-    line-height: 2em; 
-    font-size: 1.125em;
-    margin-bottom: 1em;
+    font-size: 1.125rem;
 }
 
 .button img {
-    margin-right: 0.35em;
+    margin-right: 0.5em;
 }
 
 #iosDownloadButtonDefault {
-    background-color: var(--black);
     color: var(--white);
+    background-color: var(--black);
+}
+
+#androidDownloadButtonDefault {
+    color: var(--black);
+    background-color: var(--white);
 }
 
 #iosDownloadButtonDefault:hover {
     background-color: var(--aqua);
-    color: var(--white);
-}
-
-#androidDownloadButtonDefault {
-    background-color: var(--white);
-    color: var(--black);
 }
 
 #androidDownloadButtonDefault:hover {
     background-color: var(--orange);
-    color: var(--black);
+}
+
+/* General Styling */
+
+
+body {
+    background-image: url(/code/assets/bg-main-mobile.png);
+    background-position: right 100% top -800%;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header, #description, footer {
+    margin-inline: auto;
+    width: 87.5%;
+}
+
+header {
+    margin-top: 2.5em;
+}
+
+#description h1 {
+    margin-top: 4rem;
+}
+
+#description p {
+    margin-top: 1.25em;
+    margin-bottom: 4.8125em
+}
+
+#premium-plan {
+    position: relative;
+    max-width: 1100px;
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
-.box:nth-child(3) {
-    background-color: black;
-    flex-grow: 2;
+#illustration-app {
+    width: 13.0625em;
+    max-width: 312px;
+    z-index: 1;
 }
 
-/* @media (min-width: 481px) and (max-width: 768px) {
+#premium-bg {
+    position: absolute;
+    margin-top: 6.125em;
+    width: 100%;
+    height: 600px;
+    background-color: var(--black);
+    background-image: url(/code/assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 75%;
+    border-radius: 0.75em;
+}
 
-    main {
-        grid-template-columns: repeat(6, 1fr);
+#premium-offer {
+    max-width: 446px;
+    padding-inline: auto;
+    color: var(--white);
+    background-color: var(--darkOrange);
+    border-radius: 0.75em;
+    margin-top: 3em;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#premium-offer > * {
+    width: 82.5%;
+    margin-inline: auto;
+}
+
+#premium-offer h2 {
+    margin-top: 2.25rem;
+}
+
+#premium-offer p {
+    font-size: 1.125rem;
+    line-height: 1.75em;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+#price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75em;
+}
+
+#price span {
+    font-size: 4.0625rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+#iosDownloadButtonDefault {
+    margin-bottom: 1rem;
+}
+
+#androidDownloadButtonDefault {
+    margin-bottom: 3em;
+}
+
+footer {
+    margin-top: 6.4375em;
+    margin-bottom: 5em;
+}
+
+#footer-description {
+    
+    margin-bottom: 4em;
+}
+
+#footer-description img {
+    margin-bottom: 2em;
+}
+
+#footer-description strong {
+    font-weight: bold;
+}
+
+.socials {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 700px) {
+
+    html {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        background-image: url(/code/assets/bg-pattern-1.svg), url(/code/assets/bg-main-tablet.png);
+        background-position: right -7.5% top -7.5%, left 100% top -100%;
+        background-size: 35%, 140%;
+    }
+
+    .container {
+        margin-top: 3.45em;
+        width: 90%;
+    }
+
+    header, #description, footer {
+        margin: 0;
     }
 
     #description {
-        grid-column: 1 / 6 ;
-        margin-bottom: 4em;
-    }
-
-    #description h1 {
-        font-size: 64px;
-    }
-
-    #description p {
-        font-size: 1.125em;
-    }
-
-    #logo {
-        margin-left: 2.5em;
-    }
-
-    #bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: -9em;
-        top: -16em;
-        z-index: -1;
-        background-image: url('/code/assets/bg-main-tablet.png');
-        background-position: center;
-        filter: blur(30px);
-    }
-
-    #bg-image {
-        width: 50%;
-        height: 50%;
-        scale: 0.75;
-        background-image: url(/code/assets/bg-pattern-1.svg);
-        background-repeat: no-repeat;
-        position: absolute;
-        top: -6em;
-        right: -8.5em;
+        width: 29em;
     }
 
     #premium-plan {
-        width: 90%;
-        grid-area: 2 / 1 / 3 / 7;
+        height: 834px;
+        align-items: flex-start;
     }
-
-    
 
     #illustration-app {
-        width: 70%;
-        height: 100%;
-        bottom: 12em;
-        right: 15em;
+        width: 16.75em;
+        margin-left: 3.25em;
     }
 
-    #premium-eq {
-        width: 47.5%;
-        left: 20em;
-        top: 60em;
-        padding-bottom: 1.5em;
+    #premium-offer {
+        height: 546px;
+        position: absolute;
+        width: 25em;
+        margin-top: 18em;
+        margin-left: 14em;
+
+    }
+
+    #premium-bg {
+        margin-top: 8.625em;
+        background-position: center top -30%;
+        background-size: 18.5em;
     }
 
     footer {
-        grid-area: 3 / 1 / 2 / 7;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5.4375em;
     }
 
-} */
+    #footer-description {
+        width: 67.5%;
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    body {
+        background-image: url(/code/assets/bg-pattern-1.svg),url(/code/assets/bg-main-desktop.png);
+        background-size: 22.5%, 140%;
+        background-position: right top -10%, left 50% bottom 70%;
+
+    }
+
+    .container {
+        width: 75%;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    #description {
+        margin-top: 127px;
+        font-size: 20px;
+        width: 80%;
+    }
+
+    #premium-plan {
+        margin-inline: auto;    
+    }
+
+    #illustration-app {
+        width: 312px;
+        margin-left: 7.5%;
+        margin-bottom: 2em;
+    }
+
+    #premium-bg {
+        margin-top: 17.5%;
+        background-size: 28%;
+        background-position: left 40.5% top -20%;
+    }
+
+    #premium-offer {
+        width: 446px;
+        height: 625px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 50%;
+        margin-top: 27.5%;
+    }
+
+    footer {
+        display: inline-grid;
+        grid-template-columns: 5fr 1fr;
+        margin-top: 15%;
+    }
+
+    #footer-description {
+        display: inline-flex;
+    }
+
+    #footer-description img {
+        margin-right: 17.5%;
+    }
+
+    .socials {
+        margin-bottom: 4em;
+    }
+}
