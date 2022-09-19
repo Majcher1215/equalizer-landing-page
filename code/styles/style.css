@@ -341,7 +341,7 @@ footer {
 @media (min-width: 1100px) {
 
     body {
-        background-image: url(code/assets/bg-pattern-1.svg),url(/code/assets/bg-main-desktop.png);
+        background-image: url(/code/assets/bg-pattern-1.svg),url(/code/assets/bg-main-desktop.png);
         background-size: 22.5%, 140%;
         background-position: right top -10%, left 50% bottom 70%;
 
