@@ -139,7 +139,7 @@ h2 {
 
 
 body {
-    background-image: url(/code/assets/bg-main-mobile.png);
+    background-image: url(code/assets/bg-main-mobile.png);
     background-position: right 100% top -800%;
     background-repeat: no-repeat;
 }
@@ -189,7 +189,7 @@ header {
     width: 100%;
     height: 600px;
     background-color: var(--black);
-    background-image: url(/code/assets/bg-pattern-2.svg);
+    background-image: url(code/assets/bg-pattern-2.svg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 75%;
@@ -281,7 +281,7 @@ footer {
     body {
         display: flex;
         justify-content: center;
-        background-image: url(/code/assets/bg-pattern-1.svg), url(/code/assets/bg-main-tablet.png);
+        background-image: url(code/assets/bg-pattern-1.svg), url(code/assets/bg-main-tablet.png);
         background-position: right -7.5% top -7.5%, left 100% top -100%;
         background-size: 35%, 140%;
     }
@@ -341,7 +341,7 @@ footer {
 @media (min-width: 1100px) {
 
     body {
-        background-image: url(/code/assets/bg-pattern-1.svg),url(/code/assets/bg-main-desktop.png);
+        background-image: url(code/assets/bg-pattern-1.svg),url(code/assets/bg-main-desktop.png);
         background-size: 22.5%, 140%;
         background-position: right top -10%, left 50% bottom 70%;
 
